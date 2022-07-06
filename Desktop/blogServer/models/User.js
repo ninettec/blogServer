@@ -4,20 +4,26 @@ var MongoClient = require("mongodb").MongoClient;
 
 const UserSchema = new mongoose.Schema({
     username: {
-        type:String
+        type:String,
+        required: true,
+        unique: true,
     },
     email:{
-        type:String
+        type:String,
+        required: true,
+        unique: true,
     },
     password:{
-        type:String
+        type:String,
+        required: true,
 
     },
     profilePicture:{
         type:String,
+        default: "",
     },
 },
-{ timestamps: true}
+    { timestamps: true}
 );
 
 module.exports = mongoose.model("User", UserSchema);
