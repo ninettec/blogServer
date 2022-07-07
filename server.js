@@ -51,11 +51,6 @@ app.use("/posts", postRoute);
 // routes for post categories
 app.use("/categories", categoryRoute);
 
-app.use(express.static(path.join(__dirname, "/client/build")));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
 
 
 //route for the backend port 
