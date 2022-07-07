@@ -60,6 +60,8 @@ app.get('*', (req, res) => {
 
 
 //route for the backend port 
+
+const port = process.env.PORT || "3900";
 app.listen(port, function () {
   console.log("backend is running", port);
 });
