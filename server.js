@@ -1,7 +1,6 @@
 require("dotenv").config();
 var express = require("express");
 var app = new express();
-var port = 3900;
 const mongoose = require("mongoose");
 const uri = process.env.uri;
 const authRoute = require("./routes/auth");
